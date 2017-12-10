@@ -1,1 +1,47 @@
-# itws6960-2017-final-project
+# ITWS-6960 2017 Final Project
+
+ Stephan Zednik
+ 
+## Data
+ 
+### Open Food Facts
+
+Open Food Facts is a free, open, collaborative database of food products from around the world, with ingredients, allergens, nutrition facts and all the tidbits of information we can find on product labels.
+
+Individual contents of the database are available under the Database Contents License.
+
+Available Formats: CSV/TSV and SQLite.
+
+Data access link: https://www.kaggle.com/openfoodfacts/world-food-facts
+
+### Epicurious Recipe Dataset
+
+Over 20k recipes listed by recipe rating, basic nutritional information, assigned category, ingredients, and cooking instructions lifted from http://www.epicurious.com/recipes-menus.
+
+The kaggle dataset page does not appear to specify a license for the dataset publication.  
+
+Since the dataset is lifted from https://www.epicurious.com/, which states that “no material on this site may be reproduced, distributed, transmitted, cached, or otherwise used, except with the prior written permission of Condé Nast”, I may have to look for an alternative recipe dataset.
+
+Available Formats: JSON (full recipe data)
+
+data access link: https://www.kaggle.com/hugodarwood/epirecipes
+ 
+## Installation Instructions
+
+TODO
+ 
+### Dependencies
+- python3
+-- pandas
+-- psycogp2
+-- sqlalchemy
+-- pymongo
+-- matplotlib
+ 
+### How-to load the data
+
+TODO
+ 
+### How to run the application
+
+TODO
