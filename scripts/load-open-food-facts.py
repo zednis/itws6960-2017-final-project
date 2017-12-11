@@ -172,13 +172,15 @@ def run(datafile):
             _products.append(ff)
             _codes.add(str(ff.code).strip())
 
+    print("saving data to postgresql")
     persist(session_factory, _products)
+    print("done!")
 
 
 if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(description='load food product data into postgresql')
-    parser.add_argument('--datafile', default="../../data/open-food-facts/en.openfoodfacts.org.products.csv",
+    parser.add_argument('--datafile', default="data/en.openfoodfacts.org.products.csv",
                         help='open food facts CSV file')
 
     args = parser.parse_args()

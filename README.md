@@ -28,9 +28,15 @@ data access link: https://www.kaggle.com/hugodarwood/epirecipes
  
 ## Installation Instructions
 
-TODO
+### Databases
+
+The application uses postgresql and mongodb for data persistence.
+
+Instructions for installing postgresql are available at ...
+
+The ``setup.sh`` script, and the data-loading scripts it calls, expect there to be local instances of postgresql and mongodb.
  
-### Dependencies
+### Python Dependencies
 - python3
   - psycogp2
   - sqlalchemy
@@ -38,15 +44,21 @@ TODO
 - jupyter
   - pandas
   - matplotlib
+  
+If you have python3 installed you can install the other python dependencies by running
+
+```commandline
+python3 -m pip install -r requirements.txt
+```
+
+from both the scripts/ and app/ directories.
 
  
 ### How-to load the data
 
-TODO
+The ``scripts/load-open-food-facts.py`` and ``scripts/load-recipes.py`` scripts will load the data into a locally-running postgresql and mongodb database, respectively.
 
-```commandline
-python3 
-```
+These scripts are called by ``scripts/setup.sh`` and need not be run individually.
  
 ### How to run the application
 
