@@ -38,7 +38,9 @@ Instructions for install mongodb are available at https://docs.mongodb.com/manua
 
 The ``scripts/setup.sh`` script, and the data-loading scripts it calls, expect there to be local instances of postgresql and mongodb.
 
-To change postgresql connection info modify 
+To change postgresql connection info modify the DATABASE object in ``scripts/food_fact_models.py``.
+
+To change mogodb connection info modify values from the run function in ``scripts/load-recipes.py``.
  
 ### Python Dependencies
 - python3
