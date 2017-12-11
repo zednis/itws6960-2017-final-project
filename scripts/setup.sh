@@ -21,7 +21,7 @@ createuser foodfacts || true
 createdb -O foodfacts foodfacts || true
 
 echo "loading food facts data into postgresql"
-echo "note - this is a very large dataset and will likely take upto 30 minutes to load"
+echo "note - this is a very large dataset and will likely take up to 30 minutes to load"
 python3 load-open-food-facts.py --datafile data/en.openfoodfacts.org.products.csv
 echo "done loading food facts into postgresql!"
 

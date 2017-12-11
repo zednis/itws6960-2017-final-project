@@ -32,9 +32,13 @@ data access link: https://www.kaggle.com/hugodarwood/epirecipes
 
 The application uses postgresql and mongodb for data persistence.
 
-Instructions for installing postgresql are available at ...
+Instructions for installing postgresql are available at https://www.postgresql.org/docs/9.2/static/tutorial-install.html.
 
-The ``setup.sh`` script, and the data-loading scripts it calls, expect there to be local instances of postgresql and mongodb.
+Instructions for install mongodb are available at https://docs.mongodb.com/manual/installation/.
+
+The ``scripts/setup.sh`` script, and the data-loading scripts it calls, expect there to be local instances of postgresql and mongodb.
+
+To change postgresql connection info modify 
  
 ### Python Dependencies
 - python3
@@ -68,10 +72,9 @@ The application is a jupyter python3 notebook.  This notebook loads libraries th
 
 jupyter should be installed by running
 ```commandline
+cd app
 python3 -m pip install -r requirements.txt
 ```
-
-from the app directory
 
 or manually npm with command:
 ```commandline
