@@ -2,6 +2,8 @@
 
  Stephan Zednik
  
+ github: https://github.com/zednis/itws6960-2017-final-project
+ 
 ## Data
  
 ### Open Food Facts
