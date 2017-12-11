@@ -14,6 +14,8 @@ Available Formats: CSV/TSV and SQLite.
 
 Data access link: https://www.kaggle.com/openfoodfacts/world-food-facts
 
+Dataset description: https://world.openfoodfacts.org/data/data-fields.txt
+
 ### Epicurious Recipe Dataset
 
 Over 20k recipes listed by recipe rating, basic nutritional information, assigned category, ingredients, and cooking instructions lifted from http://www.epicurious.com/recipes-menus.
@@ -27,14 +29,18 @@ data access link: https://www.kaggle.com/hugodarwood/epirecipes
 ## Installation Instructions
 
 TODO
+
+The
  
 ### Dependencies
 - python3
--- pandas
--- psycogp2
--- sqlalchemy
--- pymongo
--- matplotlib
+  - psycogp2
+  - sqlalchemy
+  - pymongo
+- jupyter
+  - pandas
+  - matplotlib
+
  
 ### How-to load the data
 
