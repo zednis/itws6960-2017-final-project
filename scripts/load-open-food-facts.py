@@ -3,7 +3,7 @@ import pandas
 import argparse
 from sqlalchemy.orm import sessionmaker
 
-from models import db_connect, create_all, drop_all, Product, Category, Ingredient, Label
+from food_fact_models import db_connect, create_all, drop_all, Product, Category, Ingredient, Label
 
 
 categories = {}
@@ -127,16 +127,14 @@ def persist(session_factory, items):
     return items
 
 
-def main():
+def run(datafile):
 
-    file = "../../data/open-food-facts/en.openfoodfacts.org.products.csv"
+    _data = []
+    for chunk in pandas.read_csv(datafile, delimiter='\t', chunksize=50000, low_memory=False, error_bad_lines=False):
+        _data.append(chunk)
 
-    foo = []
-    for chunk in pandas.read_csv(file, delimiter='\t', chunksize=50000, low_memory=False, error_bad_lines=False):
-        foo.append(chunk)
-
-    df = pandas.concat(foo, axis=0)
-    del foo
+    df = pandas.concat(_data, axis=0)
+    del _data
 
     df = df.where(pandas.notnull(df), None)
 
@@ -178,4 +176,10 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+
+    parser = argparse.ArgumentParser(description='load food product data into postgresql')
+    parser.add_argument('--datafile', default="../../data/open-food-facts/en.openfoodfacts.org.products.csv",
+                        help='open food facts CSV file')
+
+    args = parser.parse_args()
+    run(args.datafile)
